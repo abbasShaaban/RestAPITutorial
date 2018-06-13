@@ -24,15 +24,15 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',(err,client) =>{
     //         return console.log('Un able to inster todo',err);
     //     console.log(JSON.stringify(result.ops,undefined,2));
     // });
-    // db.collection('Users').insertOne({
-    //     name:'abbas',
-    //     age: 23,
-    //     location: 'haris, South Lebanon'
-    // },(err,result)=>{
-    //     if(err)
-    //        return console.log('Unable to insert data',err);
-    //     console.log(result.ops[0]._id.getTimestamp());
-    //
-    // });
+    db.collection('Users').insertOne({
+        name:'Hasan',
+        age: 23,
+        location: 'haris, South Lebanon'
+    },(err,result)=>{
+        if(err)
+           return console.log('Unable to insert data',err);
+        console.log(result.ops[0]._id.getTimestamp());
+
+    });
     client.close();
 });
